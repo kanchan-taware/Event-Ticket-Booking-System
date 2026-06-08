@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket Booking System</title>
+
+    <link rel="stylesheet" href="level3.css">
+</head>
+<body>
+
+<header>
+    <h1>Event Ticket Booking System</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Booking</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Welcome</h2>
+
+    <p>
+        Book tickets for movies, concerts and sports events.
+    </p>
+</section>
+
+<section>
+
+    <h2>Upcoming Events</h2>
+
+    <!-- Event 1 -->
+
+    <div class="card">
+
+        <img src="movie.jpg" alt="Movie">
+
+        <h3>Movie Night</h3>
+
+        <p>Date: 10 June 2026</p>
+
+        <p>Location: Pune</p>
+
+        <button onclick="bookTicket(this)">
+            Book Ticket
+        </button>
+
+        <button onclick="toggleDetails('details1')">
+            Show Details
+        </button>
+
+        <div id="details1" class="details">
+
+            <p>Venue: City Mall</p>
+
+            <p>Time: 7:00 PM</p>
+
+            <p>Ticket Price: ₹300</p>
+
+        </div>
+
+    </div>
+
+    <!-- Event 2 -->
+
+    <div class="card">
+
+        <img src="concert.jpg" alt="Concert">
+
+        <h3>Music Concert</h3>
+
+        <p>Date: 15 June 2026</p>
+
+        <p>Location: Mumbai</p>
+
+        <button onclick="bookTicket(this)">
+            Book Ticket
+        </button>
+
+        <button onclick="toggleDetails('details2')">
+            Show Details
+        </button>
+
+        <div id="details2" class="details">
+
+            <p>Venue: Stadium Arena</p>
+
+            <p>Time: 8:00 PM</p>
+
+            <p>Ticket Price: ₹500</p>
+
+        </div>
+
+    </div>
+
+     <!-- Event 3 -->
+    <div class="card">
+
+            <img src="cricket.jpg" alt="Cricket">
+
+            <h3>Cricket Match</h3>
+
+            <p>Date: 20 June 2026</p>
+
+            <p>Location: Delhi</p>
+
+             <button onclick="bookTicket(this)">
+            Book Ticket
+        </button>
+
+        <button onclick="toggleDetails('details3')">
+            Show Details
+        </button>
+
+
+            
+            <div id="details3" class="details">
+
+                <p>Venue: National Stadium</p>
+
+                <p>Time: 6:00 PM</p>
+
+                <p>Ticket Price: ₹700</p>
+            </div>
+
+        </div>
+
+</section>
+
+<!-- Booking Form -->
+
+<section>
+
+    <h2>Book Your Ticket</h2>
+    
+    <form onsubmit="return validateForm()">
+
+        <input type="text"
+               id="name"
+               placeholder="Enter Name">
+
+        <br><br>
+
+        <input type="email"
+               id="email"
+               placeholder="Enter Email">
+
+        <br><br>
+
+        <select id="event">
+
+            <option selected disabled>
+                Select Event
+            </option>
+
+            <option>
+                Movie Night
+            </option>
+
+            <option>
+                Music Concert
+            </option>
+
+            <option>
+                Cricket Match
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <input type="number"
+               id="tickets"
+               placeholder="Number of Tickets">
+
+        <br><br>
+
+        <button type="submit">
+            Submit Booking
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Event Ticket Booking System</p>
+
+    <p>Email: support@example.com</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
